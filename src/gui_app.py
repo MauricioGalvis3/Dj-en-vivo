@@ -5,7 +5,7 @@ import pygame
 class DJGui(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("DJ STACK MASTER - V2 PRO")
+        self.title("DJ STACK MASTER -- by Hernán")
         self.geometry("1000x650")
         self.dj = DJProController("assets/music")
         self.is_paused = False
@@ -50,10 +50,10 @@ class DJGui(ctk.CTk):
         self.btn_grid = ctk.CTkFrame(self.main_frame)
         self.btn_grid.pack(pady=10, padx=20, fill="x")
         
-        ctk.CTkButton(self.btn_grid, text="🌀 Reversa", command=lambda: self.apply("reverse")).grid(row=0, column=0, padx=10, pady=10)
-        ctk.CTkButton(self.btn_grid, text="⏩ Rápido", command=lambda: self.apply("fast")).grid(row=0, column=1, padx=10, pady=10)
-        ctk.CTkButton(self.btn_grid, text="⏪ Lento", command=lambda: self.apply("slow")).grid(row=0, column=2, padx=10, pady=10)
-        ctk.CTkButton(self.btn_grid, text="🔥 BOOST", command=lambda: self.apply("boost")).grid(row=0, column=3, padx=10, pady=10)
+        ctk.CTkButton(self.btn_grid, text=" Reversa", command=lambda: self.apply("reverse")).grid(row=0, column=0, padx=10, pady=10)
+        ctk.CTkButton(self.btn_grid, text=" Rápido", command=lambda: self.apply("fast")).grid(row=0, column=1, padx=10, pady=10)
+        ctk.CTkButton(self.btn_grid, text=" Lento", command=lambda: self.apply("slow")).grid(row=0, column=2, padx=10, pady=10)
+        ctk.CTkButton(self.btn_grid, text=" BOOST", command=lambda: self.apply("boost")).grid(row=0, column=3, padx=10, pady=10)
 
         ctk.CTkButton(self.main_frame, text="🔙 DESHACER ÚLTIMO CAMBIO (POP)", fg_color="#C0392B", command=self.undo).pack(pady=20)
 

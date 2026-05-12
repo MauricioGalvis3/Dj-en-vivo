@@ -1,0 +1,57 @@
+ Manual de Requerimientos y Preparación del Entorno
+Este documento detalla los pasos necesarios para la correcta ejecución del software DJ Stack Master Pro.
+
+1. Requisitos de Software (Entorno de Ejecución)
+El equipo donde se ejecute el programa debe contar con los siguientes elementos:
+
+Sistema Operativo: Windows 10/11, macOS o Linux.
+
+Lenguaje de Programación: Python 3.12.
+
+Dependencias de Audio: Se requiere FFmpeg instalado y configurado en las variables de entorno (PATH) o los archivos .exe en la raíz del proyecto.
+
+2. Instalación de Librerías (Dependencias)
+Es obligatorio instalar las librerías de terceros mediante el gestor de paquetes pip. Abra una terminal en la carpeta del proyecto y ejecute:
+
+PowerShell
+# Comando para instalar todas las dependencias en Python 3.12
+py -3.12 -m pip install pygame pydub customtkinter
+Detalle de las Librerías:
+Pygame: Manejo de la salida de audio y hardware de sonido.
+
+Pydub: Manipulación lógica de los segmentos de audio y aplicación de efectos.
+
+CustomTkinter: Renderizado de la interfaz gráfica moderna.
+
+3. Estructura de Archivos Necesaria
+Para que el programa funcione, el usuario debe asegurarse de que la estructura de carpetas se mantenga intacta:
+
+Plaintext
+Dj-en-vivo/
+├── assets/
+│   ├── music/   <-- EL USUARIO DEBE PONER SUS .MP3 AQUÍ
+│   └── temp/    <-- EL SISTEMA CREARÁ ARCHIVOS TEMPORALES AQUÍ
+├── src/
+│   ├── logic/   <-- logic_stack.py
+│   ├── main_control.py
+│   └── gui_app.py
+Nota: Si la carpeta assets/music está vacía, el programa no tendrá archivos que procesar.
+
+4. Requisitos de Configuración (FFmpeg)
+Dado que el programa realiza procesamiento de audio avanzado, el usuario debe verificar que los archivos ffmpeg.exe y ffprobe.exe sean accesibles.
+
+Si  no tiene instalado FFmpeg, debe copiar los ejecutables dentro de la carpeta src/.
+
+5. Instrucciones de Inicio
+Para iniciar la aplicación correctamente, siga estos pasos:
+
+Asegúrese de tener auriculares o altavoces conectados.
+
+Abra una terminal o consola de comandos (CMD/PowerShell).
+
+Navegue hasta la carpeta raíz del proyecto.
+
+Ejecute el comando:
+
+PowerShell
+py -3.12 .\src\gui_app.py
