@@ -1,4 +1,4 @@
-# Dj-en-vivoAquí tienes una documentación técnica sencilla, organizada y profesional, ideal para incluirla en un archivo README.md, en tu Notion o para entregarla impresa junto al proyecto. Está diseñada para que cualquier persona entienda cómo funciona tu "DJ Stack Master".
+
 
  DJ Stack Master Pro
 1. Descripción General
